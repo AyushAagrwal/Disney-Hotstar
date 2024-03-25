@@ -1,0 +1,170 @@
+.home {
+  position: relative;
+  min-height: calc(100vh- 250px);
+  overflow-x: hidden;
+  display: block;
+  top: 72px;
+  padding: 0 calc(3.5vw+5px);
+  /* padding: 20px;
+  line-height: 40px;
+  height: 100vh;
+  background: fixed; */
+
+  /* border: 2px solid rgb(0, 47, 255); */
+  /* background-image: url(../Images/home-background.png); */
+}
+
+.home:after {
+  background-image: url(../Images/home-background.png);
+  /* background: fixed; */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  content: "";
+  position: absolute;
+  inset: 0px;
+  opacity: 1;
+  z-index: -1;
+}
+
+/* !! ImageSlider CSS */
+
+.Carousel {
+  margin: 20px;
+}
+
+.Carousel > button {
+  opacity: 0;
+  height: 100%;
+  width: 5%;
+  z-index: 1;
+}
+
+.Carousel > button:hover {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out 0s;
+}
+
+.Carousel > ul > li > button:before {
+  font-size: 10px;
+  color: rgb(150, 158, 171);
+}
+
+.Carousel li.slick-active button:before {
+  color: white;
+}
+
+.slick-list {
+  overflow: initial;
+}
+
+.slick-prev {
+  left: -65px;
+}
+
+.slick-next {
+  right: -65px;
+}
+
+.Wrap {
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.Wrap > a {
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  padding: 4px;
+}
+
+.Wrap > a > img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+.Wrap:hover {
+  padding: 0;
+  border: 4px solid rgba(186, 186, 186, 0.8);
+  transition-duration: 300ms;
+}
+
+/* !!!! VIEWERS */
+
+.Container {
+  margin-top: 30px;
+  padding: 30px 10px 26px;
+  display: grid;
+  grid-gap: 25px;
+  gap: 25px;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.View-Wrap {
+  padding-top: 56.25%;
+  border-radius: 9.5px;
+  box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+    rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  border: 2.5px solid rgba(249, 249, 249, 0.1);
+}
+
+.View-Wrap > img {
+  inset: 0px;
+  display: block;
+  object-fit: cover;
+  opacity: 1;
+  position: absolute;
+  transition: opacity 500ms ease-in-out 0.1s;
+  width: 100%;
+  z-index: 1;
+  top: 0;
+}
+
+/* !! Video playing */
+
+video {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  z-index: 0;
+}
+
+/* .View-wrap > video > source:hover {
+  box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px,
+    rgb(0 0 0 / 72%) 0px 30px 22px -10px;
+  transform: scale(1.05);
+  border-color: rgba(249, 249, 249, 0.8);
+  border: 2px solid rgb(0, 17, 255);
+} */
+
+video:hover {
+  border: 2px solid rgb(251, 0, 255);
+}
+
+video {
+  border-radius: 5px; /**Optional h border radius kyuki hover km nhi kr rha tha*/
+  opacity: 1;
+}
+
+/* !! Recommended for  you */
+
+@media (max-width: 768px) {
+  .Container {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .Container {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+}

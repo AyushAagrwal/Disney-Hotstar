@@ -1,0 +1,7 @@
+.Recommended-main > .Recommended-content > .Recommended-Wrap > Link > img {
+  border: 2px solid red;
+}
+
+.Recommended-Wrap > img {
+  border: 2px solid red;
+}
